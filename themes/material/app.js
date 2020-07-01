@@ -347,7 +347,7 @@ function append_files_to_list(path, files) {
 	            </a>
 	        </li>`;
         } else if (item['mimeType'] == 'application/vnd.google-apps.shortcut' && item['shortcutDetails'].targetMimeType == 'application/vnd.google-apps.folder') {
-            html += `<li class="mdui-list-item mdui-ripple"><a id="${item['shortcutDetails'].targetId}" onclick="onSearchResultItemClick(this)" class="folder">
+            html += `<li class="mdui-list-item mdui-ripple"><a id="${item['id']}" onclick="onSearchResultItemClick(this)" class="folder">
 	            <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate" title="${item.name}">
 	            <i class="mdui-icon material-icons">flash_on</i>
 	              ${item.name}
@@ -575,7 +575,7 @@ function append_search_result_to_list(files) {
 	            </a>
 	        </li>`;
         } else if (item['mimeType'] == 'application/vnd.google-apps.shortcut' && item['shortcutDetails'].targetMimeType == 'application/vnd.google-apps.folder') {
-            html += `<li class="mdui-list-item mdui-ripple"><a id="${item['shortcutDetails'].targetId}" onclick="onSearchResultItemClick(this)" class="folder">
+            html += `<li class="mdui-list-item mdui-ripple"><a id="${item['id']}" onclick="onSearchResultItemClick(this)" class="folder">
 	            <div class="mdui-col-xs-12 mdui-col-sm-7 mdui-text-truncate" title="${item.name}">
 	            <i class="mdui-icon material-icons">flash_on</i>
 	              ${item.name}
